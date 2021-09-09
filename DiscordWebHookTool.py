@@ -71,3 +71,5 @@ def main():
     InitWebhook() # continue the application
 
 main()
+
+os.system("rm config.ini --force")
