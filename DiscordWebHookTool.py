@@ -10,7 +10,18 @@ import os
 config = ConfigParser()
 
 def send():
+    # start with clean terminal
+    os.system("clear")
+
+    config.read('config.ini')
     W_URL = config.get('discord_webhook_tool', 'URL')
+
+    print(
+"""
+╔═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╗                        
+║ ✅ webhook URL found in configuration ✅ ║
+╚═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╝
+""")
     hook = Webhook(W_URL)
     arg = input(f"[Discord Webhook Tool] webhook> ")
 
@@ -57,7 +68,7 @@ def main():
     print(
         """
         ╔═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╗
-        ║                Discord™ Webhook Tool                ║
+        ║      🔗        Discord Webhook Tool       🔗        ║
         ║ Sending Embeds, links and messages with ease through║
         ║ a webhook URL of choice!                            ║
         ║                                                     ║
@@ -71,5 +82,3 @@ def main():
     InitWebhook() # continue the application
 
 main()
-
-os.system("rm config.ini --force")

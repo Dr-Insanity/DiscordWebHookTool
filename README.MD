@@ -2,8 +2,10 @@
 
 Discord WebHook Tool is a tool for sending messages, links and/or embeds with ease through any discord webhook URL of your choice.
 
-## read please
-I try to make this understandable for people who are not familiar at all with programming or for people who have limited to no technical background. If you have a question, you should really ask it through my [discord server](https://discord.com/invite/X2NeNS3Qkg). Preferably through a [DM](https://www.webopedia.com/definitions/dm/). As long as it's no spam 🙂.
+## Audience
+for people who are not familiar at all with programming or for people who have limited to no technical background.
+
+If you have a question, you should really ask it through my [discord server](https://discord.com/invite/X2NeNS3Qkg). Preferably through a [DM](https://www.webopedia.com/definitions/dm/). As long as it's no spam 🙂.
 
 **Questions some people might have**\
 *what is [discord](https://discord.com/)?*\
@@ -79,6 +81,8 @@ Once you gave in a webhook URL, in your **terminal** You can send anything you t
 
 ## Questions? No? Good.
 I'm just kidding, Feel free to [join](https://discord.com/invite/X2NeNS3Qkg) my discord server and ask away. *Preferably through a [DM](https://www.webopedia.com/definitions/dm/).*
+
+## I am getting
 
 ## Contributing
 This project does not need any contribution, as per my preference.
