@@ -64,6 +64,8 @@ def ChangeWebHookURL():
         webhook_URL = input("specify the webhook URL> ")
         config.read('config.ini')
         config.set('discord_webhook_tool', 'URL', webhook_URL)
+        with open('config.ini', 'w') as f:
+            config.write(f)
         send()
 
     except FileNotFoundError: # We assume URL was never been given to use.
