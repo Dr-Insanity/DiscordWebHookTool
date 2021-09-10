@@ -82,8 +82,6 @@ Once you gave in a webhook URL, in your **terminal** You can send anything you t
 ## Questions? No? Good.
 I'm just kidding, Feel free to [join](https://discord.com/invite/X2NeNS3Qkg) my discord server and ask away. *Preferably through a [DM](https://www.webopedia.com/definitions/dm/).*
 
-## I am getting
-
 ## Contributing
 This project does not need any contribution, as per my preference.
 
