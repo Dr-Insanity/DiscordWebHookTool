@@ -79,6 +79,10 @@ Now, you are supposed to enter a webhook URL
 
 Once you gave in a webhook URL, in your **terminal** You can send anything you type in that **terminal** as the webhook's name in Discord! Ain't that cool?
 
+## Features?
+I wrote a gist (some kind of document) which you can read to know what exactly you can do, and how you can do it.
+please read [this](https://gist.github.com/Dr-Insanity/604c8177532e34b1a72a1f26c77fd650)
+
 ## Questions? No? Good.
 I'm just kidding, Feel free to [join](https://discord.com/invite/X2NeNS3Qkg) my discord server and ask away. *Preferably through a [DM](https://www.webopedia.com/definitions/dm/).*
 
