@@ -36,9 +36,6 @@ def send():
 
             hook.send(embed=embed)
 
-        else:
-            if arg == "x": # exit the application
-                exit()
     except ValueError:
         os.system("clear")
         print(
@@ -47,17 +44,29 @@ def send():
 ║ ❌ webhook URL invalid ❌ ║
 ╚═─═─═─═─═─═─═─═─═─═─═─═─═─═╝
 """)
+        time.sleep(3)
+
+        os.system("clear")
+
+        print(
+"""
+╔═─═─═─═─═─═─═─═─═─═─═─═─═─═╗                        
+║ 🔗   New Webhook URL   🔗 ║
+╚═─═─═─═─═─═─═─═─═─═─═─═─═─═╝
+""")
+
         # Ask for the webhook URL to use
         webhook_URL = input("specify the webhook URL> ")
+        webhook_NME = input("Give this webhook a new name> ")
         config.read('config.ini')
-        config.set('discord_webhook_tool', 'URL', webhook_URL)
+        config.set('discord_webhook_tool', '', webhook_URL)
             
         with open('config.ini', 'w') as f:
             config.write(f)
         
     send()
 
-def ChangeWebHookURL():
+def AddWebHookURL():
     try:
         open('config.ini', 'r')
         # Ask for the webhook URL to use
@@ -100,10 +109,10 @@ def ConfigCheck():
         
         print(
 """
-╔═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╗
-║      🔗        Discord Webhook Tool       🔗        ║
-║ Hey there!   I found a webhook in the configuration ║
-╚═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╝
+╔═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╗
+║ 🔗 Discord Webhook Tool 🔗  ║
+║ WebHooks found in config !! ║
+╚═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╝
 """)
         YesOrNo = input("Do you wish to (use) this or (change)?\nType 'use' or 'change' to make a choice> ")
 
@@ -114,7 +123,7 @@ def ConfigCheck():
                 send()
             elif YesOrNo.lower() == 'change':
                 os.system('clear')
-                ChangeWebHookURL()
+                AddWebHookURL()
         else:
             Q_ChangeHook_InvalidReply()
 

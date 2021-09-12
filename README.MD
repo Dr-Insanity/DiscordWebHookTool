@@ -1,11 +1,9 @@
 # Discord WebHook Tool
-
+# **ABANDONDED - Archived - Fork it all. The code is all yours**
 Discord WebHook Tool is a tool for sending messages, links and/or embeds with ease through any discord webhook URL of your choice.
 
 ## Audience
 for people who are not familiar at all with programming or for people who have limited to no technical background.
-
-If you have a question, you should really ask it through my [discord server](https://discord.com/invite/X2NeNS3Qkg). Preferably through a [DM](https://www.webopedia.com/definitions/dm/). As long as it's no spam 🙂.
 
 **Questions some people might have**\
 *what is [discord](https://discord.com/)?*\
@@ -47,7 +45,7 @@ git clone https://github.com/Dr-Insanity/DiscordWebHookTool.git
 5.) You're **done**! Please proceed to the **Usage** section below.
 
 ## Usage
-Usage is even relatively more simple than the installation procedures
+---Usage is even relatively more simple than the installation procedures---
 
 *I am assuming you still haven't closed your* **terminal** *yet*.
 
@@ -63,7 +61,7 @@ You have now opened the tool and it's initializing\
 It looks like this:
 ```
         ╔═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═─═╗
-        ║                Discord™ Webhook Tool                ║
+        ║                Discord  Webhook Tool                ║
         ║ Sending Embeds, links and messages with ease through║
         ║ a webhook URL of choice!                            ║
         ║                                                     ║
@@ -83,11 +81,8 @@ Once you gave in a webhook URL, in your **terminal** You can send anything you t
 I wrote a gist (some kind of document) which you can read to know what exactly you can do, and how you can do it.
 please read [this](https://gist.github.com/Dr-Insanity/604c8177532e34b1a72a1f26c77fd650)
 
-## Questions? No? Good.
-I'm just kidding, Feel free to [join](https://discord.com/invite/X2NeNS3Qkg) my discord server and ask away. *Preferably through a [DM](https://www.webopedia.com/definitions/dm/).*
-
 ## Contributing
-This project does not need any contribution, as per my preference.
+This project is not open for contribution, as per my preference.
 
 ## License
 - [MIT](https://choosealicense.com/licenses/mit/)
