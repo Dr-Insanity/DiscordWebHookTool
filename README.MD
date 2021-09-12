@@ -1,5 +1,5 @@
 # Discord WebHook Tool
-# **ABANDONDED - Archived - Fork it all. The code is all yours**
+# **ABANDONED - Archived - Fork it all. The code is all yours**
 Discord WebHook Tool is a tool for sending messages, links and/or embeds with ease through any discord webhook URL of your choice.
 
 ## Audience
