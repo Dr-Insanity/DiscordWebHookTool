@@ -1,38 +1,55 @@
 from dhooks import Webhook, Embed
-import asyncio
-import urllib
 from configparser import ConfigParser
-from urllib import error
-from urllib.request import Request, urlopen
 import time
 import os
 
 config = ConfigParser()
+
+class bcolors:
+    magenta = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[38;5;118m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+print(f"{bcolors.OKCYAN}Nigga"+u'✅')
+quit()
 
 def send():
     # start with clean terminal
     os.system("clear")
 
     config.read('config.ini')
-    W_URL = config.get('discord_webhook_tool', 'URL')
+    w_URL = config.get('discord_webhook_tool', 'URL')
 
     try:
-        hook = Webhook(W_URL)
-        arg = input(f"[Discord Webhook Tool] webhook> ")
+        hook = Webhook(w_URL)
+        arg = input(f"[Discord Webhook Tool][CONNECTED] webhook> ")
 
-        if arg != "embed": # just send text, if input was not embed
+        if arg.split()[0] != "embed": # just send text, if input was not embed
             hook.send(arg)
 
-        elif arg == "embed": # send embeds this way (or, if you want to do it your own way, you may write your own code below)
+        elif arg.split()[0] != "embed": # send embeds this way (or, if you want to do it your own way, you may write your own code below)
             embed = Embed(
-                description="The description of the embed",
-                color=0x2f3136, # pick a color (this is a hex-based color value in this example)
+                title="Features",
+                description="""⭐ Send custom made embeds
+⭐ Send regular messages
+⭐ Send links
+⭐ Customizable configuration file
+⭐ **[Future update]** *~~Embed builder web app~~*
+⭐ **[Future update]** *~~GUI~~*""",
+                color=0x5865F2, # pick a color (this is a hex-based color value in this example)
                 timestamp='now' # sets the timestamp to current time
                 )
 
-            embed.set_author(name='Dr-Insanity') # an author (feel free to change)
-            embed.add_field(name="Google", value='[click to go to google](https://google.com/)') # this is an example of a link (with blue text on the embed)
-            embed.set_footer(text='the text on the footer')
+            embed.set_author(name='By Dr-Insanity') # an author (feel free to change)
+            embed.set_thumbnail(url=f"https://github.com/Dr-Insanity/DiscordWebHookTool")
+            embed.add_field(name="Download (PC, not mobile)", value='[` Direct Link `](https://github.com/Dr-Insanity/DiscordWebHookTool/archive/refs/heads/main.zip) (ZIP file)') # this is an example of a link (with blue text on the embed)
+            embed.set_footer(text="This embed is made with Dr-Insanity's Webhook Tool")
 
             hook.send(embed=embed)
 
