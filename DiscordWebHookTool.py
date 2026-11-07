@@ -30,23 +30,14 @@ def send():
         if arg.split()[0] != "embed": # just send text, if input was not embed
             hook.send(arg)
 
-        elif arg.split()[0] != "embed": # send embeds this way (or, if you want to do it your own way, you may write your own code below)
-            embed = Embed(
-                title="Features",
-                description="""⭐ Send custom made embeds
-⭐ Send regular messages
-⭐ Send links
-⭐ Customizable configuration file
-⭐ **[Future update]** *~~Embed builder web app~~*
-⭐ **[Future update]** *~~GUI~~*""",
-                color=0x5865F2, # pick a color (this is a hex-based color value in this example)
-                timestamp='now' # sets the timestamp to current time
-                )
-
-            embed.set_author(name='By Dr-Insanity') # an author (feel free to change)
-            embed.set_thumbnail(url=f"https://github.com/Dr-Insanity/DiscordWebHookTool")
-            embed.add_field(name="Download (PC, not mobile)", value='[` Direct Link `](https://github.com/Dr-Insanity/DiscordWebHookTool/archive/refs/heads/main.zip) (ZIP file)') # this is an example of a link (with blue text on the embed)
-            embed.set_footer(text="This embed is made with Dr-Insanity's Webhook Tool")
+        elif arg.split()[0] == "embed": # send embeds this way (or, if you want to do it your own way, you may write your own code below)
+            title = input("embed title> ")
+            desc = input("embed description> ")
+            color = input("embed hex color> #")
+            if color.startswith('#'):
+                color = input("""embed hex color (Don't include a '#')> #""")
+            embed = Embed(color=int(color, 16), title=title, description=desc)
+            embed.set_footer(text="U Kunt Al Deze Rollen Verkrijgen!")
 
             hook.send(embed=embed)
 
